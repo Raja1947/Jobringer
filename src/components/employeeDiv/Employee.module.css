@@ -29,14 +29,28 @@
       align-items: center;
       justify-content: center;
 }
-.text_anim{
-    background-image:linear-gradient(90deg,#ffd52c 0,#ffea95 25%,#fff 50%,#ffea95 75%,#ffd52c 100%);
-    background-clip: text;
-    animation: 150s linear infinite text-animation;
-    strong{
-        font-weight: 700;
-    }
+.text_anim {
+  background-image: linear-gradient(90deg, #ffd52c 0%, #ffea95 25%, #fff 50%, #ffea95 75%, #ffd52c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 17px;
+  font-weight: 800;
+  animation: text-animation 3s linear infinite;
+  background-size: 200%; /* Ensures the gradient is wide enough to animate smoothly */
+}
+
+@keyframes text-animation {
+  0% {
+    background-position: 0% 50%;
   }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+
   .btn_log {
     margin-bottom: 0;
     display: flex !important;
@@ -63,6 +77,6 @@
 }
 .sales_btn{
     color: white;
-    text-decoration: none;
+    
     font-size: 13px;
 }
